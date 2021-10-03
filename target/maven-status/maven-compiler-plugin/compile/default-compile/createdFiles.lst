@@ -1,0 +1,9 @@
+com/developer/games/challenge5/controller/impl/RegularRoomController.class
+com/developer/games/challenge5/enums/RoomType.class
+com/developer/games/challenge5/model/RegularRoom.class
+com/developer/games/challenge5/exception/DataNotFoundException.class
+com/developer/games/challenge5/Challenge5Application.class
+com/developer/games/challenge5/service/RegularRoomService.class
+META-INF/dekorate/openshift.json
+META-INF/dekorate/openshift.yml
+com/developer/games/challenge5/controller/interfaces/IRegularRoomController.class

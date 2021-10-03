@@ -1,0 +1,63 @@
+---
+project:
+  root: file:///projects/3-Scale-1/
+  dekorateInputDir: null
+  dekorateOutputDir: META-INF/dekorate
+  dekorateMetaDir: ../.dekorate
+  buildInfo:
+    name: challenge5
+    version: 0.0.1-SNAPSHOT
+    packaging: jar
+    buildTool: maven
+    buildToolVersion: 3.6.3
+    outputFile: file:///projects/3-Scale-1/target/challenge5-0.0.1-SNAPSHOT.jar
+    classOutputDir: file:///projects/3-Scale-1/target/classes/
+    resourceDir: file:///projects/3-Scale-1/src/main/resources/
+  scmInfo:
+    root: file:///projects/3-Scale-1/
+    branch: main
+    commit: 5f0b3c31d1cbbda7092e9efe60cfa5c6aced11b9
+    remote:
+      '[remote "origin"]': https://github.com/almsasantos/3-Scale.git
+partOf: ""
+name: challenge-5-3scale
+version: 0.0.1-SNAPSHOT
+workingDir: ""
+serviceAccount: ""
+host: ""
+ports:
+  - name: http
+    containerPort: 8080
+    hostPort: 80
+    path: /
+    protocol: null
+serviceType: ClusterIP
+imagePullPolicy: IfNotPresent
+livenessProbe:
+  httpActionPath: ""
+  execAction: ""
+  tcpSocketAction: ""
+  initialDelaySeconds: 0
+  periodSeconds: 30
+  timeoutSeconds: 10
+  successThreshold: 1
+  failureThreshold: 3
+readinessProbe:
+  httpActionPath: ""
+  execAction: ""
+  tcpSocketAction: ""
+  initialDelaySeconds: 0
+  periodSeconds: 30
+  timeoutSeconds: 10
+  successThreshold: 1
+  failureThreshold: 3
+requestResources:
+  memory: ""
+  cpu: ""
+limitResources:
+  memory: ""
+  cpu: ""
+expose: false
+autoDeployEnabled: false
+replicas: 1
+headless: false

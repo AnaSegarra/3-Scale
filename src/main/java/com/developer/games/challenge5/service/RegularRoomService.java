@@ -8,9 +8,6 @@ import java.util.List;
 
 import com.developer.games.challenge5.model.RegularRoom;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import com.developer.games.challenge5.exception.DataNotFoundException;
 
 /**
@@ -22,7 +19,7 @@ public class RegularRoomService {
     /**
      * Final variable of Logger
      */
-    private static final Logger LOGGER = LogManager.getLogger(RegularRoomService.class);
+    //private static final Logger LOGGER = LogManager.getLogger(RegularRoomService.class);
     
     
     public List<RegularRoom> createRegularRoom(){
@@ -47,7 +44,7 @@ public class RegularRoomService {
      * @return a list of RegularRoom
      */
     public List<RegularRoom> findAll(){
-        LOGGER.info("Find All Regular Hotel Rooms");
+        //LOGGER.info("Find All Regular Hotel Rooms");
 
         List<RegularRoom> regularRoomList = this.createRegularRoom();
         
@@ -60,7 +57,7 @@ public class RegularRoomService {
      * @return a RegularRoom
      */
     public RegularRoom findById(Integer roomId){
-        LOGGER.info("Find Regular Hotel Room with id " + roomId);
+        //LOGGER.info("Find Regular Hotel Room with id " + roomId);
 
         List<RegularRoom> regularRoomList = this.createRegularRoom();
 

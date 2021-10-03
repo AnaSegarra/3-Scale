@@ -1,0 +1,33 @@
+--- !<io.dekorate.s2i.config.EditableS2iBuildConfig>
+project:
+  root: file:///projects/3-Scale-1/
+  dekorateInputDir: null
+  dekorateOutputDir: META-INF/dekorate
+  dekorateMetaDir: ../.dekorate
+  buildInfo:
+    name: challenge5
+    version: 0.0.1-SNAPSHOT
+    packaging: jar
+    buildTool: maven
+    buildToolVersion: 3.6.3
+    outputFile: file:///projects/3-Scale-1/target/challenge5-0.0.1-SNAPSHOT.jar
+    classOutputDir: file:///projects/3-Scale-1/target/classes/
+    resourceDir: file:///projects/3-Scale-1/src/main/resources/
+  scmInfo:
+    root: file:///projects/3-Scale-1/
+    branch: main
+    commit: 5f0b3c31d1cbbda7092e9efe60cfa5c6aced11b9
+    remote:
+      '[remote "origin"]': https://github.com/almsasantos/3-Scale.git
+partOf: ""
+name: challenge5
+version: 0.0.1-SNAPSHOT
+registry: null
+group: jboss
+image: null
+dockerFile: Dockerfile
+autoBuildEnabled: true
+autoPushEnabled: false
+enabled: true
+builderImage: fabric8/s2i-java:2.3
+autoDeployEnabled: false

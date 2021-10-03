@@ -1,3 +1,7 @@
-/projects/3-Scale-1/src/main/java/com/developer/games/challenge5/controller/Interfaces/IRegularRoomController.java
+/projects/3-Scale-1/src/main/java/com/developer/games/challenge5/enums/RoomType.java
+/projects/3-Scale-1/src/main/java/com/developer/games/challenge5/service/RegularRoomService.java
+/projects/3-Scale-1/src/main/java/com/developer/games/challenge5/model/RegularRoom.java
+/projects/3-Scale-1/src/main/java/com/developer/games/challenge5/controller/impl/RegularRoomController.java
 /projects/3-Scale-1/src/main/java/com/developer/games/challenge5/Challenge5Application.java
-/projects/3-Scale-1/src/main/java/com/developer/games/challenge5/controller/Impl/RegularRoomController.java
+/projects/3-Scale-1/src/main/java/com/developer/games/challenge5/controller/interfaces/IRegularRoomController.java
+/projects/3-Scale-1/src/main/java/com/developer/games/challenge5/exception/DataNotFoundException.java
