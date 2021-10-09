@@ -52,6 +52,9 @@ public class RegularRoom {
     public RegularRoom(Integer roomId, Integer numberOfBeds, BigDecimal price) {
         this.available = true;
         this.roomType = RoomType.REGULAR_ROOM;
+        this.roomId = roomId;
+        this.numberOfBeds = numberOfBeds;
+        this.price = price;
     }
 
 
