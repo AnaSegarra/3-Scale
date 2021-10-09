@@ -24,10 +24,10 @@ public class RegularRoomService {
     
     public List<RegularRoom> createRegularRoom(){
         //since dont have db2 connection, the values will be static
-        BigDecimal room1Price = new BigDecimal(59.99);
+        BigDecimal room1Price = new BigDecimal("59.99");
         RegularRoom room1 = new RegularRoom(1, 2, room1Price);
 
-        BigDecimal room2Price = new BigDecimal(89.99);
+        BigDecimal room2Price = new BigDecimal("89.99");
         RegularRoom room2 = new RegularRoom(2, 3, room2Price);
 
         List<RegularRoom> regularRoomList = new ArrayList<RegularRoom>();
@@ -46,9 +46,7 @@ public class RegularRoomService {
     public List<RegularRoom> findAll(){
         //LOGGER.info("Find All Regular Hotel Rooms");
 
-        List<RegularRoom> regularRoomList = this.createRegularRoom();
-        
-        return regularRoomList;
+        return this.createRegularRoom();
     }
 
     /**
