@@ -1,0 +1,110 @@
+---
+openapi: 3.0.2
+info:
+  title: Hotel Rooms Management
+  version: 1.0.0
+  description: API to look for hotel rooms
+paths:
+  /regular-rooms:
+    summary: Path used to manage the list of rooms.
+    description: "The REST endpoint/path used to list and create zero or more `Room`\
+      \ entities.  This path contains a `GET` and `POST` operation to perform the\
+      \ list and create tasks, respectively."
+    get:
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Room'
+              examples:
+                Successful response:
+                  value:
+                  - roomId: "1"
+                    numberOfBeds: 2
+                    price: 50
+                    roomType: REGULAR_ROOM
+                    available: false
+                  - roomId: "2"
+                    numberOfBeds: 3
+                    price: 80
+                    roomType: REGULAR_ROOM
+                    available: true
+          description: Successful response - returns an array of `Room` entities.
+      operationId: getRooms
+      summary: List All Rooms
+      description: Gets a list of all `Room` entities.
+  /regular-rooms/{roomId}:
+    summary: Path used to manage a single Room.
+    description: "The REST endpoint/path used to get, update, and delete single instances\
+      \ of an `Room`.  This path contains `GET`, `PUT`, and `DELETE` operations used\
+      \ to perform the get, update, and delete tasks, respectively."
+    get:
+      parameters:
+      - examples:
+          Successful response:
+            value: "1"
+        name: roomId
+        description: A unique identifier for a `Room`.
+        schema:
+          type: string
+        in: path
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Room'
+              examples:
+                Successful response:
+                  value:
+                    roomId: "1"
+                    numberOfBeds: 2
+                    price: 50
+                    roomType: REGULAR_ROOM
+                    available: false
+          description: Successful response - returns a single `Room`.
+      operationId: getRoom
+      summary: Get a Room
+      description: Gets the details of a single instance of a `Room`.
+    parameters:
+    - name: roomId
+      description: A unique identifier for a `Room`.
+      schema:
+        type: string
+      in: path
+      required: true
+components:
+  schemas:
+    Room:
+      title: Root Type for Room
+      description: Regular room type
+      type: object
+      properties:
+        roomId:
+          type: string
+        numberOfBeds:
+          format: int32
+          type: integer
+        price:
+          format: int32
+          type: integer
+        roomType:
+          type: string
+        available:
+          type: boolean
+      example:
+        roomId: "1"
+        numberOfBeds: 2
+        price: 70
+        roomType: REGULAR_ROOM
+        available: true
+  securitySchemes:
+    api-key:
+      type: apiKey
+      description: 3scale API key
+      name: api-key
+      in: header
